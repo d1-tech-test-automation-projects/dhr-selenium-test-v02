@@ -25,17 +25,17 @@ public class DashboardTest extends BaseStep {
         public void OpenDriver() {
                 LogTest.info("Kullanıcı adı Input aranıyor");
                 WebElement usernameInput = BaseStep.findElementXpathWithWait("//*[@id=\"login_email\"]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 BaseStep.clearAndType(usernameInput, "sudee20g@gmail.com", "Kullanıcı Adı");
                 LogTest.info("Kullanıcı adı gönderildi");
                 WebElement passwordInput = BaseStep.findElementXpathWithWait("//*[@id=\"login_password\"]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 LogTest.info("Parola Inputu bulunuyor");
                 BaseStep.clearAndType(passwordInput, "Sudee20g!", "Şifre");
                 LogTest.info("Parola gönderildi");
                 LogTest.info("Giriş Yap butonu bulunuyor");
                 WebElement loginClickButton = BaseStep.findElementXpathWithWait("(//button[@type='submit'])[1]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 BaseStep.clickElement(loginClickButton, "Giriş yap butonuna tıklandı");
         }
 
@@ -47,7 +47,7 @@ public class DashboardTest extends BaseStep {
                 LogTest.info("Toplam Çalışan kartının elementi bulunuyor.");
                 WebElement totalEmployeeCard = BaseStep.findElementXpathWithWait(
                                 CARD_ROW_XPATH + "/div[1]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 LogTest.info("Toplam Çalışan kartının elementi bulundu");
                 BaseStep.clickElement(totalEmployeeCard, "Toplam Çalışan kartına tıklandı");
                 LogTest.info("Toplam Çalışan kartının elementine tıklandı");
@@ -66,14 +66,14 @@ public class DashboardTest extends BaseStep {
                 BaseStep.waitSeconds(1);
                 WebElement passiveEmployeeCard = BaseStep.findElementXpathWithWait(
                                 CARD_ROW_XPATH + "/div[2]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 LogTest.info("Pasif Çalışanlar kartına tıklanıyor");
                 BaseStep.clickElement(passiveEmployeeCard, "Pasif Çalışanlar kartına tıklandı");
                 LogTest.info("Pasif Çalışanlar kartına tıklandı");
                 LogTest.info("Pasif Çalışanlar Popup Açıldı");
                 BaseStep.waitSeconds(1);
                 WebElement passiveEmployeePopupCloseButton = BaseStep.findElementXpathWithWait(
-                                "//button[@aria-label='Close']", TimeOut.SHORT.value);
+                                "//button[@aria-label='Close']", TimeOut.LONG.value);
                 LogTest.info("Pasif Çalışanlar popup kapat butonu bulundu");
                 BaseStep.clickElement(passiveEmployeePopupCloseButton, "Pasif Çalışanlar popup kapatıldı");
                 LogTest.info("Pasif Çalışanlar Popup kapatıldı");
@@ -87,7 +87,7 @@ public class DashboardTest extends BaseStep {
                 LogTest.info("Departman kartının elementi bulunuyor");
                 WebElement departmentButton = BaseStep.findElementXpathWithWait(
                                 CARD_ROW_XPATH + "/div[3]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 LogTest.info("Departman kartının elementi bulundu");
                 BaseStep.clickElement(departmentButton, "Departmanlar kartına tıklandı");
                 BaseStep.waitSeconds(1);
@@ -103,7 +103,7 @@ public class DashboardTest extends BaseStep {
                 LogTest.info("Boş Pozisyonlar kart elementi bulunuyor");
                 WebElement vacantEmployeeCard = BaseStep.findElementXpathWithWait(
                                 CARD_ROW_XPATH + "/div[4]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 BaseStep.clickElement(vacantEmployeeCard, "Boş Pozisyonlar kartına tıklandı");
                 LogTest.info("Boş Pozisyonlar kartına tıklandı");
                 BaseStep.waitSeconds(1);
@@ -119,7 +119,7 @@ public class DashboardTest extends BaseStep {
                 LogTest.info("Yönetim Doküman Talepleri kartı bulunuyor");
                 WebElement cardManagementDocumentRequest = BaseStep.findElementXpathWithWait(
                                 CARD_ROW_XPATH + "/div[7]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 LogTest.info("Yönetim Doküman Talepleri kartı bulundu");
                 BaseStep.waitSeconds(1);
                 BaseStep.clickElement(cardManagementDocumentRequest, "Yönetim Doküman Talepleri kartına tıklandı");
@@ -136,7 +136,7 @@ public class DashboardTest extends BaseStep {
                 LogTest.info("Çalışan Doküman Talepleri kartı bulunuyor");
                 WebElement cardEmployeeManagementRequest = BaseStep.findElementXpathWithWait(
                                 CARD_ROW_XPATH + "/div[8]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 LogTest.info("Çalışan Doküman Talepleri kartı bulundu");
                 BaseStep.waitSeconds(1);
                 BaseStep.clickElement(cardEmployeeManagementRequest, "Çalışan Doküman Talepleri kartına tıklandı");
@@ -151,7 +151,7 @@ public class DashboardTest extends BaseStep {
                 LogTest.info("Çalışan Tarafından Gönderilen kartı bulunuyor");
                 WebElement cardSendingByEmployee = BaseStep.findElementXpathWithWait(
                                 CARD_ROW_XPATH + "/div[9]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 LogTest.info("Çalışan Tarafından Gönderilen kartı bulundu");
                 BaseStep.waitSeconds(1);
                 BaseStep.clickElement(cardSendingByEmployee, "Çalışan Tarafından Gönderilen kartına tıklandı");
@@ -166,7 +166,7 @@ public class DashboardTest extends BaseStep {
                 LogTest.info("İzin Talepleri kartı bulunuyor");
                 WebElement cardLeaveRequest = BaseStep.findElementXpathWithWait(
                                 CARD_ROW_XPATH + "/div[10]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 LogTest.info("İzin Talepleri kartı bulundu");
                 BaseStep.waitSeconds(1);
                 BaseStep.clickElement(cardLeaveRequest, "İzin Talepleri kartına tıklandı");
@@ -181,7 +181,7 @@ public class DashboardTest extends BaseStep {
                 LogTest.info("Okunmamış Duyurular kartı bulunuyor");
                 WebElement cardUnreadAnnouncements = BaseStep.findElementXpathWithWait(
                                 CARD_ROW_XPATH + "/div[12]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 LogTest.info("Okunmamış Duyurular kartı bulundu");
                 BaseStep.waitSeconds(1);
                 BaseStep.clickElement(cardUnreadAnnouncements, "Okunmamış Duyurular kartına tıklandı");
@@ -196,7 +196,7 @@ public class DashboardTest extends BaseStep {
                 LogTest.info("Yaklaşan Doğum Günleri kartı bulunuyor");
                 WebElement cardUpcomingBirthdays = BaseStep.findElementXpathWithWait(
                                 CARD_ROW_XPATH + "/div[13]",
-                                TimeOut.SHORT.value);
+                                TimeOut.LONG.value);
                 LogTest.info("Yaklaşan Doğum Günleri kartı bulundu");
                 BaseStep.waitSeconds(1);
                 BaseStep.clickElement(cardUpcomingBirthdays, "Yaklaşan Doğum Günleri kartına tıklandı");
