@@ -78,7 +78,7 @@ public class PersonnelManagementTest extends BaseStep {
 
         waitSeconds(2);
         LogTest.info("Dropdown açılmaya çalışılıyor...");
-        WebElement roleSelector = BaseStep.findElementXpathWithWait("//span[text()='Rol seçin']/ancestor::div[contains(@class, 'ant-select-selector')]", TimeOut.LONG.value);
+        WebElement roleSelector = BaseStep.findElementXpathWithWait("//span[text()='Rol seçin' or text()='Select role']/ancestor::div[contains(@class, 'ant-select-selector')]", TimeOut.LONG.value);
         BaseStep.clickElement(roleSelector, "Rol dropdown alanı");
         LogTest.info("Dropdown tetiklendi.");
 
@@ -192,7 +192,7 @@ public class PersonnelManagementTest extends BaseStep {
     @DisplayName("Yeni Çalışan Ekleniyor")
     public void addNewEmployee() {
         LogTest.info("'Yeni Çalışan Ekle' butonu aranıyor...");
-        WebElement newEmployeeButton = findElementXpathWithWait("//button[.//span[text()='Yeni Çalışan Ekle']]", TimeOut.LONG.value);
+        WebElement newEmployeeButton = findElementXpathWithWait("//button[.//span[text()='Yeni Çalışan Ekle' or text()='Add New Employee']]", TimeOut.LONG.value);
         BaseStep.clickElement(newEmployeeButton, "Yeni Çalışan Ekle Butonu");
         LogTest.info("Yeni çalışan ekleme formu açılıyor...");
         waitSeconds(1);

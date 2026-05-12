@@ -162,6 +162,13 @@ public class LeaveManagementTest extends BaseStep {
                 BaseStep.clickElement(exportBtn, "Dışa Aktar Butonu");
                 BaseStep.waitSeconds(2);
 
+                LogTest.info("Filtre seçeneklerinden Pending durumu seçiliyor...");
+                String pendingCheckboxXpath = "//div[contains(@class, 'ant-space-item') and text()='Pending']";
+                WebElement pendingOption = BaseStep.findElementXpathWithWait(pendingCheckboxXpath, TimeOut.SHORT.value);
+                BaseStep.clickElement(pendingOption, "Pending Durumu Seçim İşlemi");
+                BaseStep.waitSeconds(1);
+                LogTest.info("Pending başarıyla seçildi.");
+
                 LogTest.info("Çalışan Seç butonuna tıklanıyor...");
                 WebElement selectEmployeeBtn = BaseStep.findElementXpathWithWait(
                                 "//div[contains(@class, 'ant-modal-content')]//button[.//span[contains(text(), 'Çalışan Seç')]]",
